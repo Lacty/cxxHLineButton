@@ -1,2 +1,2 @@
 # cxxHLineButton
-Easy Draw Horizontal Line With Your Selected Color
+Place a button that makes it easy to draw a horizontal line of the selected color.
