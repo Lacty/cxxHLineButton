@@ -20,8 +20,8 @@ struct hlButton {
 
 input int BUTTON_WIDTH        = 34; // ボタンの横幅
 input int BUTTON_HEIGHT       = 20; // ボタンの縦幅
-input int INDENT_WIDTH_PER    = 4;
-input int INDENT_HEIGHT_PER   = 2;
+input int INDENT_WIDTH_PER    = 20; // 表示位置x%
+input int INDENT_HEIGHT_PER   = 2;  // 表示位置y%
 
 
 // ボタンの色
@@ -49,7 +49,7 @@ int step = 0;
 
 int OnInit() {
    
-   int x = int(ChartGetInteger(0, CHART_WIDTH_IN_PIXELS, 0) * INDENT_WIDTH_PER / 60.f);
+   int x = int(ChartGetInteger(0, CHART_WIDTH_IN_PIXELS, 0) * INDENT_WIDTH_PER / 100.f);
    int y = int(ChartGetInteger(0, CHART_HEIGHT_IN_PIXELS, 0) * INDENT_HEIGHT_PER / 100.f);
    
    for (int i = 0; i < ARRAY_LENGTH(hlButtons); i++) {
